@@ -1,22 +1,33 @@
 > [!NOTE]
 > If you find our repository useful don't forget to star!
 
-<h4 align="center"><a href="https://github.com/luafv/rbxflags/tree/clean">clean version</a> ✧ <a href="https://discord.gg/HNe7fzR9xg">discord</a> ✧ <a href="https://github.com/luafv/rbxperf">performance list</a> </h4>
-
 <h3 align="center">
-  <img src="assets/newgens.gif" width="256" alt="NEWGENS...">
+  <img src="assets/pbc.gif" width="256" alt="Playboi Carti">
 </h3>
 
-<h1 align="center">rbxflags</h1>
+<h1 align="center">#RBXFLAG$</h1>
 
 <h4 align="center">Join our Discord Server for early access FastFlags before we publish</h4>
+<h5 align="center">https://discord.gg/HNe7fzR9xg</h5>
+
+<h4 align="center">Join our Roblox group</h4>
+<h5 align="center">https://www.roblox.com/groups/34911020/FIVE55</h5>
+
+<h4 align="center">Repository Discussions</h4>
+<h5 align="center">https://github.com/luafv/rbxflags/discussions</h5>
+
 
 > [!CAUTION]
 > **Fast Flags are extremely powerful, being that they are intended to only be used by Roblox engineers. While they can be very useful, they can cause issues with stability and functionality if you don't know what you're doing.**
 
-#### Version: `8.26.24` `1 Year Anniversary`
-* **186 Currently Listed**
-* **`Increased Asset Preloading Count` `Reduced Avatar Item Particle in FP` `V2 Menu`**
+#### Versioqn: `9.13.24` `SHUTEMUP`
+* **200 Currently Listed**
+* **`Enable Genres`** **`Rename Communications to Voice Enabled`** **`old luapp chat button`** **Disable Toast Notifications**
+* **`Remove Parental Controls Tab`** **`Legacy Search`** **`Disable Profile Picture Customization Tab`** **`Render Occlusion Culling`**
+* **`Remove long recommended section in homepage`**
+
+## View list at https://github.com/luafv/rbxflags
+* **List Return**
 * **[Upcoming Updates Progress](assets/lists/updates/progress.md)**
 
 ## Bloxstrap How to Use:
@@ -27,7 +38,7 @@
 
 <img src="/assets/tutorial260.gif" width="750"/>
 
-## Normal Roblox Bootstrapper  How to Use:
+## Normal Roblox Bootstrapper How to Use:
 ###### You can also do Roblox Studio
 1. **Navigate to your Roblox Installation directory. Typically found at `%localappdata%\Roblox\Versions\` or `C:\Program Files (x86)\Roblox\Versions`.**
 2. **Identify the folder `version-xxxxxxxxxxxxxxxx` ~~containing `RobloxPlayerBeta.exe`~~ You can do this for Roblox Studio too.**
@@ -63,7 +74,18 @@
 
 <img src="assets/bitdancer.png" width="888"/>
 
-<h3 align="center">꧖ꦿꦸ</h3>
+<div align="center">
+
+<b>
+I've been up, baby<br>
+Heavy reminiscin'<br>
+Heavy on the missing you<br>
+Wish it was different than what it was
+</b>
+
+</div>
+
+<h5 align="center">•</h5>
 
 <h1 align="center">Rendering API</h1>
 
@@ -127,6 +149,21 @@
 
 <h1 align="center">Graphical Settings</h1>
 
+### Render Occlusion Culling
+###### [@CloneTrooper1019](https://x.com/MaximumADHD/status/1832331711486865769)
+```json
+{
+    "DFFlagUseVisBugChecks": "True",
+    "FFlagEnableVisBugChecks27": "True"
+}
+```
+### Increased Particles on low graphics
+###### @teeenoob
+```json
+{
+    "FFlagDebugDeterministicParticles" : "True"
+}
+```
 ### Makes stuff slightly brighter
 ```json
 {
@@ -241,7 +278,10 @@ High
 ### Makes avatars shiny 
 > [!TIP]
 > **Everything goes black on below <3**
-> [!NOTE] **DFIntDebugFRMQualityLevelOverride is there to set your graphics to 3 bars**
+
+> [!NOTE]
+> **DFIntDebugFRMQualityLevelOverride is there to set your graphics to 3 bars**
+
 > [!TIP]
 > **You can change it to anything above 3**
 ```json
@@ -338,7 +378,7 @@ High
 ```
 ### Texture Manager
 > [!TIP]
-> -1 Removes almost everything, 1-4 Blurry, 5-7 low quality also removes studs, 8 Removes almost everything (this is better)
+> 1-4 Blurry, 5-7 low quality also removes studs, 8 Removes almost everything
 ```json
 {
     "FIntDebugTextureManagerSkipMips": "-1"
@@ -355,6 +395,7 @@ High
 ### Force MSAA 
 > [!IMPORTANT]
 > **Values: 0, 1, 2, 4, 8**
+
 > [!CAUTION]
 > **Values over 4> will cause viewport bugs**
 ```json
@@ -381,6 +422,36 @@ High
 
 <h1 align="center">Quality of Life</h1>
 
+### 5 Decimal Sensitivity Precision
+```json
+{
+    "FFlagFixSensitivityTextPrecision": "False"
+}
+```
+### Removes translated supported message on join
+> [!NOTE]
+> `"Roblox automatically translates supported languages in chat."`
+```json
+{
+    "FFlagChatTranslationEnableSystemMessage": false
+}
+```
+
+### Allows you to customize which languages are available for the chat translation feature
+> [!IMPORTANT]
+> English cannot be removed.
+###### @thefrenchguy4
+```json
+{
+    "FStringChatTranslationEnabledLocales": "es_es,fr_fr,pt_br,de_de,it_it,ja_jp,ko_kr,id_id,tr_tr,zh_cn,zh_tw,th_th,pl_pl,vi_vn,ru_ru,"
+}
+```
+### Remove long recommended section in homepage
+```json
+{
+    "FIntGameGridFlexFeedItemTileNumPerFeed": "0"
+}
+```
 ### Disable Captures Keybind
 ```json
 {
@@ -390,7 +461,7 @@ High
 ### Reduced Avatar Item Particle in FP
 ```json
 {
-    "FFlagUserHideCharacterParticlesInFirstPerson": true
+    "FFlagUserHideCharacterParticlesInFirstPerson": "True"
 }
 ```
 ### FPS Unlocker in Roblox Menu Settings
@@ -417,6 +488,7 @@ High
 ### Hide guis
 > [!IMPORTANT]
 > **Replace "ID" with any group ID that you are in.**
+
 | Key combination   | Action                                                                    |
 | ----------------- | ------------------------------------------------------------------------- |
 | Ctrl + Shift + B  | Toggles GUIs in 3D space (BillboardGuis, SurfaceGuis, etc)                |
@@ -467,10 +539,19 @@ High
 ### Surf the web inside of Roblox
 > [!IMPORTANT]
 > **Click the Beta badge or the 13+ badge to open the webview browser.**
+```json
+{
+    "FFlagTopBarUseNewBadge": "True",
+    "FStringTopBarBadgeLearnMoreLink": "https://google.com/",
+    "FStringVoiceBetaBadgeLearnMoreLink": "https://google.com/"
+}
+```
+### MTU
 > [!TIP]
 > **Identify the Current MTU**
 > - **Windows**: Open Command Prompt and type `netsh interface ipv4 show subinterfaces`.
 > - **Linux**: Use `ifconfig` or `ip link show` to find the current MTU of your network interface.
+
 > [!TIP]
 > **Determine the Optimal MTU**
 > - **Ping Test**: Use the `ping` command with the `-f` flag (to avoid fragmentation) and the `-l` (or `-s` on Linux) flag to set the packet size.
@@ -483,14 +564,6 @@ High
 >   ping -s 1472 -M do roblox.com
 >   ```
 > - Start with a packet size of 1472 bytes, then reduce by 10-12 bytes if needed until you find the largest size that doesn't fragment. Add 28 bytes to this number to get the optimal MTU.
-```json
-{
-    "FFlagTopBarUseNewBadge": "True",
-    "FStringTopBarBadgeLearnMoreLink": "https://google.com/",
-    "FStringVoiceBetaBadgeLearnMoreLink": "https://google.com/"
-}
-```
-### MTU 
 ```json
 {
     "DFIntConnectionMTUSize": "MTU_HERE"
@@ -524,15 +597,17 @@ High
 ### Increased Asset Preloading Count
 > [!NOTE]
 > **Increasing the maximum limit of preloaded assets from 100 to infinite allows games you've already played to load much faster by instantly accessing previously loaded assets.**
+
 > [!IMPORTANT]
 > **For this to be effective, the game must have been fully loaded at least once, preferably with the entire map cached.**
+
 > [!TIP]
 > **If a game has a "Skip Loading" button, it's recommended to use it. These games typically include a countdown timer that, after reaching zero, merely confirms that all assets are loaded.**
 ###### @spectroscopic
-```
+```json
 {
-    "DFIntNumAssetsMaxToPreload": 9999999,
-    "DFIntAssetPreloading": 9999999
+    "DFIntNumAssetsMaxToPreload": "9999999",
+    "DFIntAssetPreloading": "9999999"
 }
 ```
 ### Disable In-Game Purchases
@@ -588,6 +663,42 @@ High
 
 <h1 align="center">User Interface/Visuals</h1>
 
+### Remove Parental Controls Tab
+```json
+{
+    "FFlagLuaAppsEnableParentalControlsTab": "False"
+}
+```
+### Legacy Search
+```json
+{
+    "FFlagAXSearchLandingPageIXPEnabled4": "False"
+}
+```
+### Disable Profile Picture Customization
+```json
+{
+"FFlagAXDefaultAvatarToShopEnabled3": "False"
+}
+```
+### old luaapp chat button
+```json
+{
+    "FStringNewChatTabExperimentLayerValue": "2024MUSIC"
+}
+```
+### Disable Toast Notifications
+```json
+{
+    "FFlagToastNotificationsProtocolEnabled2": "False"
+}
+```
+### Rename Communications to Voice Enabled
+```json
+{
+    "FFlagGameDetailsDecoupledCommunication": "False"
+}
+```
 ### Break Reduced Motion V4
 ###### @kezcn
 ![image](https://github.com/user-attachments/assets/cfdc9732-084e-4c09-bc43-8039a3bf0d89)
@@ -722,6 +833,12 @@ High
     "FFlagUIBloxUseNewThemeColorPalettes": "True"
 }
 ```
+### Blue Theme
+```json
+{
+    "FFlagLuaAppEnableFoundationColors": "True"
+}
+```
 ### No Transparency V4 Menu **(2023)**
 ```json
 {
@@ -847,14 +964,22 @@ High
 
 <h1 align="center">User Interface/Visuals Experimental</h1>
 
-### Custom Accessory Positions
+### Enable Genres
+```json
+{
+    "FFlagLuaAppGenreUnderConstruction": "False"
+}
 ```
+
+### Custom Accessory Positions <sup>Working in game</sup>
+```json
 {
     "FFlagAXAccessoryAdjustment": "True",
     "FFlagAXAccessoryAdjustmentIXPEnabled": "True",
     "FFlagAXAccessoryAdjustmentIXPEnabledForAll": "True",
     "FFlagAXAvatarFetchResultCamelCase": "True",
-    "FFlagAccessoryAdjustmentEnabled3": "True"
+    "FFlagAccessoryAdjustmentEnabled3": "True",
+    "FFlagAccessoryAdjustmentEnabled4": "True"
 }
 ```
 ### Enable First Time User Experience for Chrome UI
@@ -907,6 +1032,7 @@ High
 
 > [!IMPORTANT]
 > **Studio Only**
+
 > [!NOTE]
 > **I tried `Ragdoll` to see if anything would happen lol this is how i found this (found this long time ago)**
 ###### @burgerboxer
@@ -1026,7 +1152,9 @@ High
 ### Max Raycast Distance
 > [!NOTE]
 > **Raycasting is the use of intersection tests to solve problems in Roblox. The most common use of raycasting is to determine the first object intersected by a ray. This is done by casting a virtual ray from a certain point in a direction and determining the first surface it intersected with.**
-###### Break legs collision from 2 to -inf, kinda break camera on values over 3 noclip cam on 3
+
+> [!TIP]
+> **Break legs collision from 2 to -inf, kinda break camera on values over 3 noclip cam on 3**
 ```json
 {
     "DFIntRaycastMaxDistance": "3"
@@ -1040,7 +1168,7 @@ High
 ```
 ### Change DataSender Rate
 > [!NOTE]
-> a.k.a does not let you load games
+> **A.k.a does not let you load games**
 ```json
 {
     "DFIntDataSenderRate": "-1"
@@ -1135,6 +1263,7 @@ High
 ### Hip Height
 > [!NOTE]
 > **Very controllable bounce, only works with negative values**
+
 > [!TIP]
 > **0 allows you to hover**
 ```json
@@ -1151,7 +1280,9 @@ High
 ### Network Ownership
 > [!NOTE]
 > better [network ownership](https://create.roblox.com/docs/physics/network-ownership) of parts
-> [!CAUTION] This might get you banned in some games with anticheats (Limbobbia)
+
+> [!CAUTION]
+> **This might get you banned in some games with anticheats (Limbobbia)**
 ```json
 {
     "DFIntMinClientSimulationRadius": "2147000000",
@@ -1163,6 +1294,7 @@ High
 > [!NOTE]
 > `'FFlagDebugSimDefaultPrimalSolver' : True`  
 > This flag enables the new simulation engine or whatever it is.
+
 > [!CAUTION]
 > `'DFIntDebugSimPrimalLineSearch' : 1`  
 > This setting is a poor man's gravity/flight. The default value is 100:
@@ -1185,7 +1317,7 @@ High
 ```
 ### Low Gravity 2
 > [!CAUTION]
-> This is more buggy
+> **This is more buggy**
 ```json
 {
   "FFlagDebugSimDefaultPrimalSolver": "True",
@@ -1231,11 +1363,12 @@ High
 ### Backwards SpeedHax
 > [!WARNING]
 > **Bugginess and speed depend on the value of `DFIntDebugSimPrimalWarmstartForce`. Recommended values are `775` and the value I put.**
+
 > [!TIP]
 > **For `DFIntDebugSimPrimalWarmstartVelocity`, it’s recommended to use a value of `150`. However, it might be difficult to control.**
+
 > [!NOTE]
 > **I may not have found this first, but I discovered this by myself.**
-
 ```json
 {
   "DFIntDebugSimPrimalNewtonIts": "1",
@@ -1289,21 +1422,6 @@ High
     "DFIntDebugSimPrimalWarmstartVelocity": "102",
     "DFIntDebugSimPrimalWarmstartForce": "-800",
     "DFIntDebugSimPrimalToleranceInv": "1"
-}
-```
-### Spin 2
-> [!NOTE]
-> Spin + fly
-###### [video 1](https://streamable.com/c5rhfw) [video 2](https://streamable.com/c70sc8)
-###### @kezcn
-```json
-{
-
-    "FFlagDebugSimDefaultPrimalSolver": "True",
-    "DFIntDebugSimPrimalLineSearch": "50",
-    "DFIntDebugSimPrimalWarmstartVelocity": "103",
-    "DFIntDebugSimPrimalStiffness": "300",
-    "DFIntBulletContactBreakOrthogonalThresholdPercent": "10000"
 }
 ```
 ### Speed 2
@@ -1500,7 +1618,7 @@ High
 }
 ```
 > [!TIP]
-> 
+> e.g
 ```json
 {
     "FStringDebugShowFlagState": "DFIntTaskSchedulerTargetFps, ChannelName"
@@ -1519,6 +1637,7 @@ High
 }
 ```
 ### Prevents Remote Events from running
+###### @spectroscopic
 ```json
 {
     "DFIntRemoteEventSingleInvocationSizeLimit": "1"
@@ -1585,22 +1704,18 @@ High
     "FFlagDisableFeedbackSoothsayerCheck": "False"
 }
 ```
+### Self Explanatory 7
+###### @thefrenchguy4
+```
+{
+    "FFlagRenamePassesAndGearToSubscriptionsAndPasses": "False"
+}
+```
 
 <h1 align="center">Community Presets</h1>
 
 <h4 align="center">We are not accepting performance Fast Flags that aren't listed or known.</h4>
 
-### no idea what this is
-```json
-{
-  "FFlagDebugSimDefaultPrimalSolver": "True",
-  "DFIntDebugSimPrimalLineSearch": "0",
-  "DFIntDebugSimPrimalWarmstartVelocity": "100",
-  "FFlagSimAdaptiveTimesteppingDefault2": "True",
-  "DFIntDebugSimPrimalWarmstartForce": "1",
-  "DFFlagSimHumanoidTimestepModelUpdate": "True"
-}
-```
 ### absolutely kill your game quality with fflags known to me
 ##### @dynamitebumblemouth
 ```json
@@ -1639,17 +1754,17 @@ High
 <h4 align="center">⁺ You've reached the bottom of the list! ⁺</h4>
 
 <h3 align="center">
-  <a href="https://open.spotify.com/track/3cM1GiA3OqESGO5zEZATAP">
-    <img src="https://shop.travisscott.com/cdn/shop/files/DaysRealBlue_1500x.jpg" width="256" alt="Listen on Spotify">
+  <a href="https://open.spotify.com/track/2cZOYofOX4d6g0OXxkaIjA">
+    <img src="https://i.scdn.co/image/ab67616d0000b27373e7e87fdd649b0e6dde2ca9" width="256" alt="Listen on Spotify">
   </a>
 </h3>
 
 
-<h3 align="center">Backyard - Travis Scott</h3>
+<h3 align="center">ALL RED - Playboi Carti</h3>
 
 
 <h1 align="center">
-  <a href="https://open.spotify.com/track/3cM1GiA3OqESGO5zEZATAP">
+  <a href="https://open.spotify.com/track/2cZOYofOX4d6g0OXxkaIjA">
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" width="100">
   </a>
 </h1>
@@ -1702,10 +1817,11 @@ High
     <td>A fastvariable that can change at run-time, and<br/>automatically updates every 5 minutes.</td>
   </tr>
 </table>
+<div align="center">
+  
+  [![License](https://img.shields.io/github/license/pizzaboxer/bloxstrap)](https://github.com/luafv/rbxflags/blob/main/LICENSE)
+  [![Version](https://img.shields.io/github/v/release/luafv/rbxflags?color=7a39fb)](https://github.com/luafv/rbxflags/releases/latest)
+  [![Discord](https://img.shields.io/discord/1241247795470536725?logo=discord&logoColor=white&label=discord&color=4d3dff)](https://discord.gg/HNe7fzR9xg)
+
 </div>
-<h3 align="center">
-  <a href="https://discord.gg/HNe7fzR9xgF">
-    <img src="https://c.tenor.com/fWO4Tmw3BeYAAAAC/tenor.gif" width="465">
-  </a>
-</h3>
 <h4 align="center">© 2024 luafv All Rights Reserved.</h4>
